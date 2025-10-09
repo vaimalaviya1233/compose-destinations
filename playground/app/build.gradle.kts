@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -36,10 +38,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
     buildFeatures {
         compose = true
     }
@@ -68,6 +66,7 @@ android {
 kotlin {
     jvmToolchain(11)
     compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_11)
         freeCompilerArgs.addAll("-opt-in=kotlin.RequiresOptIn")
     }
 }

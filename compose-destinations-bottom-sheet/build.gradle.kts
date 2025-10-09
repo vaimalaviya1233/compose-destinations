@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -30,10 +32,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
-
     buildFeatures {
         compose = true
     }
@@ -41,6 +39,7 @@ android {
 
 kotlin {
     compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_1_8)
         freeCompilerArgs.addAll(
             "-opt-in=kotlin.RequiresOptIn",
             "-opt-in=com.ramcosta.composedestinations.annotation.internal.InternalDestinationsApi"
