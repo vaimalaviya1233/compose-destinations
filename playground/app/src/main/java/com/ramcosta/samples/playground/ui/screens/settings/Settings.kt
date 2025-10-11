@@ -1,5 +1,6 @@
 package com.ramcosta.samples.playground.ui.screens.settings
 
+import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -93,6 +94,7 @@ fun SettingsScreen(
  * As an example of a preview
  */
 //@Preview
+@SuppressLint("ViewModelConstructorInComposable")
 @Composable
 fun SettingsPreview() {
     SettingsScreen(
