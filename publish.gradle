@@ -6,7 +6,7 @@ group = "io.github.raamcosta.compose-destinations"
 version = tag
 
 mavenPublishing {
-    publishToMavenCentral("S01")
+    publishToMavenCentral()
 
     signAllPublications()
 

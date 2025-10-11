@@ -8,7 +8,7 @@ compileSdkSampleApps = "36"
 kotlin = "2.2.20"
 dependencyCheckPluginVersion = "0.53.0"
 agp = "8.13.0"
-mavenPublishPluginVersion = "0.31.0"
+mavenPublishPluginVersion = "0.34.0"
 
 composeViewModel = "2.9.4"
 activityCompose = "1.11.0"
