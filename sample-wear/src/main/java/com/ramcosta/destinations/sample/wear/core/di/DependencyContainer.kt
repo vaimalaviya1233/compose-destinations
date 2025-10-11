@@ -27,23 +27,23 @@ class DependencyContainer(
     val stepsRepository: StepsRepository by lazy { StepsRepository() }
 
     @Suppress("UNCHECKED_CAST")
-    fun <T> createViewModel(modelClass: Class<T>, handle: SavedStateHandle): T {
+    fun <T> createViewModel(modelClass: Class<T>, handle: () -> SavedStateHandle): T {
         return when (modelClass) {
             MainViewModel::class.java -> MainViewModel(loginStateRepository)
             AccountViewModel::class.java -> AccountViewModel(loginStateRepository)
             TaskListViewModel::class.java -> TaskListViewModel(tasksRepository, stepsRepository)
             AddTaskViewModel::class.java -> AddTaskViewModel(tasksRepository)
             AddStepViewModel::class.java -> AddStepViewModel(
-                handle.navArgs<AddStepDialogNavArgs>().taskId,
+                handle().navArgs<AddStepDialogNavArgs>().taskId,
                 stepsRepository
             )
             TaskDetailsViewModel::class.java -> TaskDetailsViewModel(
-                handle,
+                handle(),
                 tasksRepository,
                 stepsRepository
             )
             StepDetailsViewModel::class.java -> StepDetailsViewModel(
-                handle.navArgs<StepScreenNavArgs>().stepId,
+                handle().navArgs<StepScreenNavArgs>().stepId,
                 tasksRepository,
                 stepsRepository
             )
