@@ -179,7 +179,7 @@ Choose the one that matches your Compose version, considering this table:
  <tr>
   <td>Compose 1.9 (1.9.x)</td>
     <td>
-        <img alt="Maven Central" src="https://img.shields.io/maven-metadata/v?versionPrefix=2.3&color=blue&metadataUrl=https://s01.oss.sonatype.org/service/local/repo_groups/public/content/io/github/raamcosta/compose-destinations/core/maven-metadata.xml&style=for-the-badge)](https://maven-badges.herokuapp.com/maven-central/io.github.raamcosta.compose-destinations/core)">
+        <img alt="Maven Central" src="https://img.shields.io/maven-metadata/v?versionPrefix=2.3&color=blue&metadataUrl=https://repo1.maven.org/maven2/io/github/raamcosta/compose-destinations/core/maven-metadata.xml&style=for-the-badge)](https://central.sonatype.com/artifact/io.github.raamcosta.compose-destinations/core)">
     </td>
  </tr>
 </table>
